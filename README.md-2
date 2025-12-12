@@ -1,0 +1,72 @@
+# 📌 Log Analyzer Tool
+
+A practical IT support tool that reads server/application log files, extracts errors and warnings, and generates a summary report in Excel format.
+
+This tool demonstrates skills essential for IT support, including log investigation, error analysis, and automation using Python.
+
+---
+
+## 🚀 Features
+- Automatically loads all `.log` files inside the `logs/` directory  
+- Extracts `timestamp`, `log level`, and `message`  
+- Counts the number of occurrences by log level (ERROR, WARNING, INFO, etc.)  
+- Analyzes errors by hour of occurrence  
+- Outputs a structured Excel report  
+- Useful for troubleshooting, monitoring, and system trend analysis  
+
+---
+
+## 📁 Folder Structure
+log_analyzer/
+│
+├── logs/ # Put your .log files here
+├── output/ # Generated Excel reports
+├── log_analyzer.py
+└── README.md
+
+---
+
+## 🧠 Example Log Format
+Your log files should look like:
+[2025-01-01 12:30:22] ERROR: Failed to connect to database
+[2025-01-01 12:31:05] WARNING: Slow response time detected
+[2025-01-01 12:32:10] INFO: Task completed successfully
+
+
+---
+
+## 🐍 Usage
+
+### **1. Install dependencies**
+pip install pandas openpyxl
+
+### **2. Place log files**
+Place your `.log` files inside the `logs/` folder.
+
+### **3. Run the script**
+python log_analyzer.py
+
+### **4. Output**
+The report is saved as:
+output/log_report_YYYYMMDD.xlsx
+
+Sheets included:
+
+- `raw_logs`  
+- `by_level` (ERROR / WARNING / INFO counts)  
+- `by_hour` (time-based error occurrence analysis)  
+
+---
+
+## 📌 Future Enhancements (optional)
+- Error trend graph generation  
+- Slack / Teams notification for critical errors  
+- Keyword-based alert system  
+- Anomaly detection using machine learning  
+- Web UI version (Streamlit)  
+
+---
+
+## 📜 License
+MIT License
+
