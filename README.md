@@ -81,4 +81,3 @@ output/aggregated_sales_YYYYMMDD.xlsx
 MIT License
 
 
-MIT License
